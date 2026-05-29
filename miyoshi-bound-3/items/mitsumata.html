@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[EDIT: Product Name] — MIYOSHI BOUND</title>
+  <meta name="description" content="[EDIT: Product description for SEO — Miyoshi, Tokushima, Japan.]">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="item-page">
+
+  <!-- Navigation -->
+  <nav class="nav nav--light">
+    <a href="../index.html" class="nav__logo">MIYOSHI B SIDE STORY</a>
+    <ul class="nav__links">
+      <li><a href="../index-catalog.html">Catalog</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Eye-catch ──────────────────────────────────────── -->
+  <section class="item-eyecatch">
+    <p class="item-eyecatch__catch">
+      Decorating a 400-year story.
+    <p class="item-eyecatch__catch">
+      Mitsumata is the plant used for 
+    </p>
+     <p class="item-eyecatch__catch">
+     Japanese banknotes.
+    </p>
+
+       <img class="item-eyecatch__image" src="../images/mistumataA.jpg" alt="MISTUMATA KODACHI">
+
+    
+
+    <p class="item-eyecatch__subcatch">Craft</p>
+    <h1 class="item-eyecatch__name">MITSUMATA KODACHI</h1>
+    <p class="item-eyecatch__producer">[EDIT: AKIRA OHNO / mistumata.work]</p>
+  </section>
+
+  <!-- ── Story ─────────────────────────────────────────── -->
+  <article class="story container--n">
+
+    <div class="story__block">
+      <p class="story__text">
+        Mitsumata is our 400-year history<br>
+        Mitsumata has been cherished by our ancestors since ancient times, supporting the history and beauty of Japan as traditional washi paper for over 400 years.<br>
+       This product was born from a pure and simple desire: to find a way to display this magnificent traditional material in our modern, everyday spaces.
+      </p>
+    </div>
+
+    <!--
+      サブ写真1: ../images/[shop-id]-sub1.jpg に差し替えてください
+    -->
+        <img class="item-eyecatch__image" src="../images/mitsumataB.jpg" alt="MISTUMATA KODACHI">
+
+    <div class="story__block">
+      <p class="story__text">
+       The manufacturing process begins with carefully peeling the bark from each branch by hand.
+The peeled bark is actually supplied to the government as raw material for paper currency. The reality is that currently, about 90% of the Mitsumata used for Japanese banknotes is imported from Nepal.<br>
+        However, we strongly believe that "the banknotes representing Japan should be made from domestic materials as much as possible." Driven by this heartfelt wish, we are deeply committed to domestic production and processing.What remains after the bark is peeled away is the beautiful inner wood.
+Usually hidden during the papermaking process, we take this pure core and dye each piece by hand in vibrant colors.
+      </p>
+    </div>
+
+    <!--
+      サブ写真2: ../images/[shop-id]-sub2.jpg に差し替えてください
+    -->
+    <img class="item-eyecatch__image" src="../images/IMG_5957.jpg" alt="MISTUMATA KODACHI"></div>
+
+  </article>
+
+  <!-- ── Producer ───────────────────────────────────────── -->
+  <section class="producer">
+    <p class="producer__label">The MESSEAGE from</p>
+    <img class="producer__portrait" src="../images/IMG_0574 2.JPG" alt="">
+
+   
+    <p class="producer__name">AKIRA OHNO</p>
+    <p class="producer__title"></p>
+    <p class="producer__bio">
+     It may not be something strictly essential for survival.
+But its mere presence adds a touch of brightness to your everyday scenery. We deliver these fragments of history preserved by our predecessors, along with the pride of Japanese craftsmanship, as an interior piece designed to add a little playfulness to your daily life.
+    </p>
+    <p class="producer__message">
+    
+    </p>
+  </section>
+
+  <!-- ── I'm Interested ─────────────────────────────────── -->
+  <section class="interest-section">
+    <p class="interest-section__label">Did this catch your eye?</p>
+    <button class="btn-interest" id="btnInterest" aria-label="I'm Interested">
+      I'm Interested
+    </button>
+  </section>
+
+  <!-- ── Back Link ──────────────────────────────────────── -->
+  <a href="../index-catalog.html" class="back-link">← Back to Catalog</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__logo">local drip</p>
+    <p class="footer__copy">© 2024 MIYOSHI BOUND. Tokushima, Japan.</p>
+  </footer>
+
+  <!-- ── Tracking ───────────────────────────────────────── -->
+  <script src="../js/tracking.js"></script>
+  <script>
+    /**
+     * PRODUCER CONFIG
+     * ─────────────────────────────────────────────────────
+     * このファイルを複製して各事業者ページを作成する際は
+     * 以下の SHOP_ID を変更してください。
+     * 例: 'oboke-honey', 'iya-washi', 'tenku-yamacya'
+     *
+     * SHOP_ID が未設定の場合は URLパラメータ ?shop= または
+     * ファイル名から自動取得します。
+     * ─────────────────────────────────────────────────────
+     */
+    var SHOP_ID = '[EDIT_SHOP_ID]';
+
+    // フォールバック: URLパラメータ → ファイル名
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fromParam = params.get('shop');
+      if (fromParam) { SHOP_ID = fromParam; return; }
+      if (SHOP_ID === '[EDIT_SHOP_ID]' || !SHOP_ID) {
+        var filename = window.location.pathname.split('/').pop().replace('.html', '');
+        SHOP_ID = filename || 'unknown';
+      }
+    })();
+
+    // ページ閲覧ログ
+    MiyoshiTrack.send({ shop: SHOP_ID, type: 'view' });
+
+    // I'm Interested ボタン
+    var btn = document.getElementById('btnInterest');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        if (btn.classList.contains('is-liked')) return;
+        btn.classList.add('is-liked');
+        btn.textContent = 'Thank you ♡';
+        MiyoshiTrack.send({ shop: SHOP_ID, type: 'like' });
+      });
+    }
+  </script>
+</body>
+</html>

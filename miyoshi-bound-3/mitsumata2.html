@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>みつまた子立 — MIYOSHI BOUND</title>
+  <meta name="description" content="400年のストーリーを飾る。みつまたは、日本のお札にも使われる強靭な植物です。徳島県三好市産。">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* 日本語版専用：英語版と同一レイアウト、フォントのみ調整 */
+    .item-eyecatch__catch,
+    .story__text,
+    .producer__bio {
+      font-family: 'Noto Sans JP', sans-serif;
+      letter-spacing: 0.08em;
+      line-height: 2.0;
+    }
+    .item-eyecatch__catch {
+      font-weight: 300;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 200;
+      font-family: Helvetica, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-switch:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+  </style>
+</head>
+<body class="item-page">
+
+  <!-- 言語切替 -->
+  <a href="mitsumata-kodachi.html" class="lang-switch">EN</a>
+
+  <!-- Navigation -->
+  <nav class="nav nav--light">
+    <a href="../index.html" class="nav__logo">MIYOSHI B SIDE STORY</a>
+    <ul class="nav__links">
+      <li><a href="../index-catalog.html">Catalog</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Eye-catch ──────────────────────────────────────── -->
+  <section class="item-eyecatch">
+    <p class="item-eyecatch__catch">
+      飾るのは、400年のストーリー。
+    </p>
+    <p class="item-eyecatch__catch">
+      みつまたは、日本のお札としても
+    </p>
+    <p class="item-eyecatch__catch">
+      使われる強靭な植物です。
+    </p>
+
+    <img class="item-eyecatch__image" src="../images/mistumataA.jpg" alt="みつまた小太刀">
+
+    <p class="item-eyecatch__subcatch">Craft</p>
+    <h1 class="item-eyecatch__name">みつまた子立</h1>
+    <p class="item-eyecatch__producer">AKIRA OHNO / mistumata.work</p>
+  </section>
+
+  <!-- ── Story ─────────────────────────────────────────── -->
+  <article class="story container--n">
+
+    <div class="story__block">
+      <p class="story__text">
+        私たちの先祖が古くから親しみ、400年以上もの間、和紙として日本の歴史や美を支え続けてきた「みつまた」。この素晴らしい伝統素材の姿を、どうにか現代の私たちの日常に飾ることはできないか。その純粋な思いから、このプロダクトは生まれました。
+      </p>
+    </div>
+
+    <img class="item-eyecatch__image" src="../images/mitsumataB.jpg" alt="みつまた小太刀">
+
+    <div class="story__block">
+      <p class="story__text">
+        製造工程は、一本一本、丁寧に職人の手で皮を剥くことから始まります。<br>
+        実は、剥がした「皮」の部分は、紙幣の原料として国に納めています。現在、日本のお札に使われるみつまたの約90%がネパール産に依存しているのが実情です。しかし、「日本の顔であるお札は、できる限り国産の素材で作られてほしい」。私たちはそんな強い願いのもと、国内での生産と加工にこだわっています。
+      </p>
+    </div>
+
+    <img class="item-eyecatch__image" src="../images/IMG_5957.jpg" alt="みつまた小太刀 染色工程">
+
+    <div class="story__block">
+      <p class="story__text">
+        そして、皮を剥ぎ終わった後に残る、美しい「芯の木」。<br>
+        通常は和紙づくりの過程で隠れてしまうこの部分を、一本一本手作業で鮮やかに染め上げました。
+      </p>
+    </div>
+
+  </article>
+
+  <!-- ── Producer ───────────────────────────────────────── -->
+  <section class="producer">
+    <p class="producer__label">つくり手より</p>
+    <p class="producer__name">大野 陽</p>
+    <p class="producer__title">mistumata.work</p>
+    <p class="producer__bio">
+      生きていく上で、絶対に必要なものではないかもしれません。<br>
+      けれど、これがあるだけでいつもの風景が少しだけ華やかになる。先人たちが守ってきた歴史の欠片と、日本のものづくりの誇りを、日常に遊び心を添えるインテリアとしてお届けします。
+    </p>
+    <p class="producer__message"></p>
+  </section>
+
+  <!-- ── I'm Interested ─────────────────────────────────── -->
+  <section class="interest-section">
+    <p class="interest-section__label">気になりましたか？</p>
+    <button class="btn-interest" id="btnInterest" aria-label="気になる">
+      気になる
+    </button>
+  </section>
+
+  <!-- ── Back Link ──────────────────────────────────────── -->
+  <a href="../index-catalog.html" class="back-link">← カタログへ戻る</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__logo">local drip</p>
+    <p class="footer__copy">© 2024 MIYOSHI BOUND. Tokushima, Japan.</p>
+  </footer>
+
+  <!-- ── Tracking ───────────────────────────────────────── -->
+  <script src="../js/tracking.js"></script>
+  <script>
+    var SHOP_ID = 'mitsumata-kodachi';
+
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fromParam = params.get('shop');
+      if (fromParam) { SHOP_ID = fromParam; return; }
+    })();
+
+    MiyoshiTrack.send({ shop: SHOP_ID, type: 'view' });
+
+    var btn = document.getElementById('btnInterest');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        if (btn.classList.contains('is-liked')) return;
+        btn.classList.add('is-liked');
+        btn.textContent = 'ありがとう ♡';
+        MiyoshiTrack.send({ shop: SHOP_ID, type: 'like' });
+      });
+    }
+  </script>
+</body>
+</html>

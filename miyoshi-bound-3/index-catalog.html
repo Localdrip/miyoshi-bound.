@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog — MIYOSHI BOUND</title>
+  <meta name="description" content="Browse artisans and producers of Miyoshi, Tokushima.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--light">
+    <a href="index.html" class="nav__logo">MIYOSHI B SIDE STORY</a>
+    <ul class="nav__links">
+      <li><a href="index-catalog.html">Catalog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <p class="page-header__eyebrow">Miyoshi, Tokushima</p>
+
+    <div class="community__img photo-ph fi">
+      <img src="images/logo.jpg" style="width: 30%; max-width: 150px; margin: 2rem auto; display: block;" alt="logo">
+    </div>
+
+    <h1 class="page-header__title">Catalog</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- Category Filter: ALL / PANTRY / SWEETS / CRAFT -->
+    <div class="filter-bar" role="group" aria-label="Filter by category">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pantry">Pantry</button>
+      <button class="filter-btn" data-filter="sweets">Sweets</button>
+      <button class="filter-btn" data-filter="craft">Craft</button>
+    </div>
+
+    <!-- Catalog Grid -->
+    <div class="catalog-grid" id="catalogGrid">
+
+      <!-- Card 01 — Craft -->
+      <a class="catalog-card" href="items/mitsumata.html" data-category="craft">
+        <img class="catalog-card__image" src="images/mistumataA.jpg" alt="MITSUMATA KODACHI">
+        <p class="catalog-card__category">Craft</p>
+        <h2 class="catalog-card__name">MITSUMATA KODACHI</h2>
+        <p class="catalog-card__desc">This plant is the source of Japanese banknotes.</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+      <!-- Card 02 — Pantry -->
+      <a class="catalog-card" href="items/template.html?shop=tenku-yamacya&from=catalog" data-category="pantry">
+        <div class="catalog-card__image" style="background:#E0DED8;"></div>
+        <p class="catalog-card__category">Pantry</p>
+        <h2 class="catalog-card__name">A</h2>
+        <p class="catalog-card__desc">雲の上で育つ、三好の霧深い山が生んだ手摘みの緑茶。</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+      <!-- Card 03 — Sweets -->
+      <a class="catalog-card" href="items/template.html?shop=oboke-honey&from=catalog" data-category="sweets">
+        <div class="catalog-card__image" style="background:#E0DED8;"></div>
+        <p class="catalog-card__category">Sweets</p>
+        <h2 class="catalog-card__name">B</h2>
+        <p class="catalog-card__desc">吉野川渓谷の花々から採れた、野生の蜂蜜。</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+      <!-- Card 04 — Pantry -->
+      <a class="catalog-card" href="items/template.html?shop=iya-miso&from=catalog" data-category="pantry">
+        <div class="catalog-card__image" style="background:#E0DED8;"></div>
+        <p class="catalog-card__category">Pantry</p>
+        <h2 class="catalog-card__name">C</h2>
+        <p class="catalog-card__desc">山里の清水と大豆で仕込む、深い旨みの手作り味噌。</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+      <!-- Card 05 — Sweets -->
+      <a class="catalog-card" href="items/template.html?shop=kazura-kashi&from=catalog" data-category="sweets">
+        <div class="catalog-card__image" style="background:#E0DED8;"></div>
+        <p class="catalog-card__category">Sweets</p>
+        <h2 class="catalog-card__name">D</h2>
+        <p class="catalog-card__desc">祖谷のかずら橋をモチーフにした、素朴な和菓子。</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+      <!-- Card 06 — Craft -->
+      <a class="catalog-card" href="items/template.html?shop=miyoshi-ai&from=catalog" data-category="craft">
+        <div class="catalog-card__image" style="background:#E0DED8;"></div>
+        <p class="catalog-card__category">Craft</p>
+        <h2 class="catalog-card__name">E</h2>
+        <p class="catalog-card__desc">阿波藍の伝統を受け継ぐ、深い青の手染め布。</p>
+        <span class="catalog-card__cta">View →</span>
+      </a>
+
+    </div><!-- /catalogGrid -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__copy">© MIYOSHI BOUND. Tokushima, Japan.</p>
+  </footer>
+
+  <script src="js/tracking.js"></script>
+  <script>
+    MiyoshiTrack.send({ shop: 'catalog', type: 'view' });
+
+    // Category filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.catalog-card');
+
+    function updateGrid(filter) {
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+      const visibleCount = [...cards].filter(c => c.style.display !== 'none').length;
+      const cols = visibleCount >= 3 ? 3 : visibleCount;
+      cards.forEach(card => {
+        if (card.style.display !== 'none') {
+          card.style.width = cols === 1 ? '100%'
+            : cols === 2 ? 'calc(50% - 1px)'
+            : 'calc(33.333% - 1px)';
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        updateGrid(btn.dataset.filter);
+      });
+    });
+
+    // 初期表示
+    updateGrid('all');
+  </script>
+</body>
+</html>
+

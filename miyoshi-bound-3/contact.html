@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact MIYOSHI BOUND — Apply to join the catalog or get in touch with the team." />
+  <title>Contact — MIYOSHI BOUND</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── Contact-specific ───────────────────────────────── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+      padding-block: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sidebar info */
+    .contact-sidebar {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .contact-sidebar__title {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-sidebar__body {
+      font-size: 0.88rem;
+      line-height: 1.95;
+      color: #666;
+      letter-spacing: 0.03em;
+      margin-bottom: 2rem;
+    }
+
+    .contact-detail {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-detail dt {
+      font-size: 0.62rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-detail dd {
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+    }
+
+    /* Form area */
+    .form-note {
+      font-size: 0.78rem;
+      line-height: 1.8;
+      color: #888;
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+      padding: 1.2rem 1.5rem;
+      border-left: 2px solid var(--color-border);
+      background: #f5f3ef;
+    }
+
+    /* What to expect section */
+    .expect-list {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .expect-list__title {
+      font-size: 0.68rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .expect-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .expect-step__num {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--color-border);
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .expect-step__title {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .expect-step__body {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="site-nav scrolled" aria-label="Site navigation">
+    <a href="index.html" class="site-nav__logo">MIYOSHI BOUND</a>
+    <ul class="site-nav__links" role="list">
+      <li><a href="index-catalog.html">Catalog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ── Page Header ───────────────────────────────────── -->
+    <header class="page-header">
+      <h1 class="page-header__title">Contact</h1>
+      <div class="divider"></div>
+      <p class="t-caption" style="max-width:560px; margin-inline:auto; color:#999;">
+        カタログへの掲載を希望される生産者の皆様、またはインバウンド対応へのサポートをご希望される方はこちらからお願いいたします。
+      </p>
+    </header>
+
+
+    <!-- ── What to Expect ─────────────────────────────── -->
+    <div class="container">
+      <div class="expect-list fade-in" style="padding-top: var(--space-lg); margin-bottom: 0;">
+        <p class="page-header__title">　　　　　　　　今後の流れ</p>
+        <div class="expect-steps">
+          <div>
+            <p class="expect-step__num">01</p>
+            <p class="expect-step__title">登録完了メールの送付</p>
+            <p class="expect-step__body">
+              フォームよりご登録いただくと、すぐに自動返信メールが届きます。メール内には、次のステップに進むための専用リンクが記載されています。
+            </p>
+          </div>
+          <div>
+            <p class="expect-step__num">02</p>
+            <p class="expect-step__title">質問フォームへのご回答</p>
+            <p class="expect-step__body">
+              お届けしたリンクは、参加特典である「一商品限定の無料翻訳」や「その他お困りごと」を行うための質問フォームです。掲載を希望する商品についての質問にWeb上でお答えください。
+            </p>
+          </div>
+          <div>
+            <p class="expect-step__num">03</p>
+            <p class="expect-step__title">翻訳原稿の作成と送付</p>
+            <p class="expect-step__body">
+              ご回答いただいた内容を基に、当サイトの翻訳担当者がインバウンド層へ響く英語原稿へと翻訳・編集いたします。後日、完成した原稿をメールにてお送りします。
+            </p>
+          </div>
+          <div>
+            <p class="expect-step__num">04</p>
+            <p class="expect-step__title">原稿確認・HP掲載へ</p>
+            <p class="expect-step__body">
+              お送りした翻訳原稿をチェックしていただき、問題がなければそのままホームページ（HP）への掲載・公開手続きへと移らせていただきます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="contact-layout" style="padding-top: clamp(4rem, 8vw, 7rem);">
+
+        <!-- ── Sidebar ──────────────────────────────────── -->
+        <aside class="contact-sidebar fade-in">
+          <p class="contact-sidebar__title">About the Form</p>
+          <p class="contact-sidebar__body">
+            本フォームは、「MIYOSHI BOUND」カタログへの参加やインバウンド対応に関心のある、徳島県三好市内の生産者・事業者の皆様を対象としています。画面右側のフォームから必要事項をご入力の上、ご登録をお願いいたします。
+          </p>
+
+          <dl>
+            <div class="t-caption">
+              <dt>入会費/月額利用料</dt>
+              <dd>無料</dd>
+            </div>
+          </dl>
+        </aside>
+
+
+        <!-- ── Form Area ─────────────────────────────────── -->
+        <div class="fade-in">
+          <div class="google-form-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfRdTNMfnqiuXRMIU1u7YaPNsi4a0WUC0ViUXU6voP8I250qw/viewform?embedded=true"
+              width="100%"
+              height="967"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="MIYOSHI BOUND お問い合わせフォーム"
+              loading="lazy">
+              読み込んでいます…
+            </iframe>
+          </div>
+
+        </div><!-- /form area -->
+      </div><!-- /contact-layout -->
+
+    </div><!-- /container -->
+  </main>
+
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="index-catalog.html">Catalog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">© 2024 MIYOSHI BOUND — Tokushima, Japan</p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/tracking.js"></script>
+  <script>
+    MiyoshiTrack.send({ shop: 'contact', type: 'view' });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
+
